@@ -2,6 +2,28 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f1dce9"><meta name="description" content="Interactive game economy balancing lab by Liani Ovalles. Explore upgrade pacing, reward multipliers and rebirth tradeoffs."><title>Balancing Lab | Liani Ovalles</title>
 <style>
 :root{--ink:#39283c;--muted:#68556b;--line:#efd0e3;--pink:#ae578d;--cream:#fff7fb}*{box-sizing:border-box}body{margin:0;background:#f1dce9;color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}a{color:#8e3e73}a:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid #a74d87;outline-offset:3px}.wrap{width:min(1060px,calc(100% - 36px));margin:auto}header{background:#fff5fa;border-bottom:1px solid var(--line);padding:17px 0}nav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}nav a{font-weight:750}.logo{font-size:23px;text-decoration:none;color:var(--ink)}.flower{color:#cb72ac}main{padding:20px 0 40px}section{background:var(--cream);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,40px);margin:20px 0}h1{font-size:clamp(35px,6vw,60px);line-height:1.13;letter-spacing:-.04em;margin:12px 0}h2{font-size:clamp(25px,4vw,34px);line-height:1.2;margin:8px 0 16px}h3{font-size:19px;margin:0 0 7px}p{color:var(--muted)}.eyebrow{color:#a74d87;font-size:12px;text-transform:uppercase;letter-spacing:.09em;font-weight:800}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.panel{background:#fbeaf4;border:1px solid var(--line);border-radius:16px;padding:19px}.field{margin:0 0 20px}.field label{display:flex;justify-content:space-between;gap:12px;font-weight:700}.field output{font-variant-numeric:tabular-nums;color:#8c3e72}input[type=range]{display:block;width:100%;accent-color:var(--pink);margin:13px 0}.small{font-size:13px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.metric{background:#fbeaf4;border:1px solid var(--line);border-radius:14px;padding:17px}.metric strong{display:block;font-size:clamp(20px,3vw,29px);color:#8c3e72}.metric span{font-size:13px;color:var(--muted)}.bars{display:grid;gap:13px;margin-top:16px}.barrow{display:grid;grid-template-columns:95px 1fr 100px;gap:12px;align-items:center;font-size:13px}.track{height:19px;border-radius:999px;background:#f3d9e8;overflow:hidden}.fill{height:100%;width:0;background:#b96299;border-radius:999px;transition:width .2s}.barrow strong{text-align:right;font-variant-numeric:tabular-nums}.notice{border-left:4px solid #b96299;padding:12px 17px;background:#fbeaf4;border-radius:9px}.button{border:0;background:var(--pink);color:white;border-radius:11px;padding:11px 17px;font-weight:750;cursor:pointer}.button:hover{background:#8c3e72}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}th{color:#7d4269}.tablewrap{overflow-x:auto}footer{padding:0 0 30px;color:var(--muted);font-size:14px}@media(max-width:700px){.grid,.metrics{grid-template-columns:1fr}.barrow{grid-template-columns:65px 1fr 75px;gap:8px}section{border-radius:18px}}@media(prefers-reduced-motion:reduce){.fill{transition:none}}
+
+/* Kawaii XCAPE refresh: soft candy colors, playful details, professional readability */
+:root{--ink:#47334d;--muted:#746579;--purple:#a56cc0;--pink:#f2a6cc;--line:#f0d5e8;--card:#fffafd;--accent:#d66ba7;--mint:#8fbfb5;--bg:#fff1f8}
+body{background:radial-gradient(circle at 8% 6%,#ffe0ef 0,transparent 27%),radial-gradient(circle at 91% 18%,#e9dafa 0,transparent 29%),linear-gradient(180deg,#fff7fb,#f9efff);color:var(--ink)}
+header{background:rgba(255,250,253,.95);border-bottom:1px solid #f3d7e9;backdrop-filter:blur(12px)}
+.brand{color:#c45c9a!important}
+a{color:#a1498e}
+a:hover{color:#873b79}
+.hero,section,.intro,.stats,.closing,.world-card,.card,.project{border-color:#f1d6e7!important;box-shadow:0 8px 26px rgba(180,99,154,.07)}
+.hero,.intro{background:linear-gradient(135deg,#fffafd 0%,#fff0f8 70%,#f5eaff 100%)}
+.eyebrow,.world-type{color:#b24c90}
+.btn,.button{background:#d66ba7!important;color:#fff!important;border-radius:999px!important;box-shadow:0 4px 0 #b84f89}
+.btn.secondary{background:#fce0ef!important;color:#8c4476!important;border:1px solid #efb9d7!important;box-shadow:none}
+.btn:hover,.button:hover{background:#bf5793!important;color:#fff!important}
+.fact,.stat{background:#fff0f7!important;border:1px solid #f3d4e6!important}
+.fact strong,.stat strong{color:#b44c91!important}
+.world-media{background:linear-gradient(135deg,#f7c5de,#e7d9fa)!important}
+.world-body,.body{background:#fffafd}
+.world-card,.project,.card{border-radius:22px!important}
+.world-fallback{color:#8e4b86!important}
+.world-teasers a{background:#fff0f7!important;border-color:#f1cfe4!important}
+a:focus-visible{outline:3px solid #a85294}
 </style></head>
 <body><header><nav class="wrap"><a class="logo" href="index.html">liani <span class="flower">✿</span></a><div><a href="index.html">Portfolio</a> &nbsp; <a href="design-notes.html">Design notes</a></div></nav></header>
 <main class="wrap"><section><div class="eyebrow">Interactive systems design study</div><h1>Progression Balancing Lab.</h1><p>Explore how reward rates, upgrade prices and rebirth bonuses change the pacing of a replayable driving game. Adjust the assumptions and see the projected progression change instantly.</p><div class="notice"><strong>Illustrative model, not production analytics.</strong> All starting numbers below are hypothetical teaching assumptions. This is an interactive design exercise inspired by my progression work, not a reconstruction of actual game economy data.</div></section>
