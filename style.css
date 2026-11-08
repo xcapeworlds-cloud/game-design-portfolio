@@ -23,3 +23,15 @@
 
 /* Plain portfolio background */
 body{background:#f8f7fb!important;background-image:none!important;background-attachment:scroll!important}
+
+/* Soft kawaii palette: muted lavender, dusty rose, reduced glare */
+:root{--ink:#393445;--muted:#625c6b;--pink:#a97898;--lav:#ddd4e4;--cream:#f0ebf0;--line:#d6cbd8}
+body{background:#e8e2eb!important;background-image:none!important;color:var(--ink)}
+header{background:#e5dce7!important;border-color:#d3c6d6}
+.panel,.card,.project,.stat,.showcase-tile,.experience-item{background:#f0ebf1!important;border-color:#d6cbd8!important}
+.hero{background:#e7dce8!important}
+.media,.showcase-caption,.callout{background:#e9dfe9!important}
+.btn{background:#88667f!important;color:#fff!important}
+.btn:hover{background:#72556c!important}
+.btn.secondary,.tag{background:#dfd1df!important;color:#59465b!important;border-color:#cdbbce!important}
+a,.brand,.eyebrow,.stat strong,.experience-date{color:#805c7a}
